@@ -1,0 +1,154 @@
+/* 全体の設定：黒背景 */
+body {
+    font-family: 'Verdana', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #000; /* 完全な黒 */
+    color: #fff;
+}
+
+/* メインの箱：カラフルな発光枠 */
+.container {
+    text-align: center;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    border: 3px solid #fff;
+    /* 虹色の多重発光エフェクト */
+    box-shadow: 
+        0 0 10px #ff0000,
+        0 0 20px #ff7f00,
+        0 0 30px #ffff00,
+        0 0 40px #00ff00,
+        inset 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* ネオン風のテキスト（強化版） */
+.neon-text {
+    color: #fff;
+    /* 白色の芯と、外側に広がるカラフルな光 */
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #ff00ff, /* ピンク */
+        0 0 30px #00ffff, /* 水色 */
+        0 0 40px #ffff00; /* 黄色 */
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1.neon-text {
+    margin-bottom: 30px;
+    font-style: italic;
+    font-size: 2.5rem;
+}
+
+/* --- ルーレット部分のデザイン --- */
+.roulette-wrapper {
+    position: relative;
+    width: 320px; /* 少し大きく */
+    height: 320px;
+    margin: 0 auto 30px;
+}
+
+/* 上部の固定マーカー（▼）：目立つゴールド */
+.marker {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid #ffd700; /* ゴールド */
+    z-index: 10;
+    filter: drop-shadow(0 0 15px #ffd700);
+}
+
+/* 回る円盤：虹色グラデーションと強力発光 */
+.board {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    /* 背景を鮮やかな虹色グラデーションに変更 */
+    background: conic-gradient(
+        #ff0000, #ff7f00, #ffff00, #00ff00, 
+        #00ffff, #0000ff, #ff00ff, #ff0000
+    );
+    border: 4px solid #fff;
+    /* 赤・緑・青の三原色を重ねた強力な発光 */
+    box-shadow: 
+        0 0 20px #ff0000,
+        0 0 40px #00ff00,
+        0 0 60px #0000ff,
+        inset 0 0 30px rgba(0,0,0,0.5);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transform: rotate(0deg);
+}
+
+/* 中心の光る点 */
+.center-point {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #fff, 0 0 30px #ffff00;
+    z-index: 2;
+}
+/* --- デザインここまで --- */
+
+
+/* 結果表示エリア：一番目立つ黄色 */
+#result {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 20px 0;
+    min-height: 80px;
+    color: #ffff00; /* 黄色 */
+    /* 黄色と白の強力な光 */
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 20px #ffff00,
+        0 0 40px #ffff00,
+        0 0 60px #ff7f00; /* オレンジの光も追加 */
+}
+
+/* ネオン風ボタン：ゴールド */
+.neon-button {
+    font-size: 1.8rem;
+    padding: 12px 60px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #ffd700; /* ゴールド文字 */
+    border: 3px solid #ffd700; /* ゴールド枠 */
+    border-radius: 10px;
+    /* ゴールドの発光 */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), inset 0 0 10px rgba(255, 215, 0, 0.3);
+    transition: all 0.3s;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.neon-button:hover {
+    background-color: #ffd700;
+    color: #000;
+    /* マウスを乗せるとさらに強く光る */
+    box-shadow: 0 0 30px #ffd700, 0 0 60px #ffd700;
+}
+
+.neon-button:disabled {
+    border-color: #888;
+    color: #888;
+    box-shadow: none;
+    cursor: not-allowed;
+}
