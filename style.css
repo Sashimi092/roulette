@@ -26,16 +26,14 @@ body {
         inset 0 0 20px rgba(255,255,255,0.2);
 }
 
-/* ネオン風のテキスト（強化版） */
+/* style.css の 26行目付近 */
 .neon-text {
     color: #fff;
-    /* 白色の芯と、外側に広がるカラフルな光 */
+    /* 修正案：白のぼかしを最小限にし、色の影をハッキリさせる */
     text-shadow: 
-        0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 20px #ff00ff, /* ピンク */
-        0 0 30px #00ffff, /* 水色 */
-        0 0 40px #ffff00; /* 黄色 */
+        1px 1px 2px #000,    /* 文字のキワに黒い影を入れて輪郭を引き締める */
+        0 0 10px #ff00ff,    /* ピンクの光 */
+        0 0 20px #00ffff;    /* 水色の光 */
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -108,19 +106,17 @@ h1.neon-text {
 /* --- デザインここまで --- */
 
 
-/* 結果表示エリア：一番目立つ黄色 */
+/* style.css の 103行目付近 */
 #result {
     font-size: 4rem;
     font-weight: 800;
     margin: 20px 0;
     min-height: 80px;
-    color: #ffff00; /* 黄色 */
-    /* 黄色と白の強力な光 */
+    color: #ffff00; 
+    /* 修正案：ぼかしすぎない設定 */
     text-shadow: 
-        0 0 5px #fff,
-        0 0 20px #ffff00,
-        0 0 40px #ffff00,
-        0 0 60px #ff7f00; /* オレンジの光も追加 */
+        2px 2px 4px #000,    /* 黒い縁取りで文字を浮かせる */
+        0 0 10px #ff7f00;    /* オレンジの光を1層だけにする */
 }
 
 /* ネオン風ボタン：ゴールド */
