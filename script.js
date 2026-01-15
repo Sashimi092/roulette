@@ -4,7 +4,6 @@
 const items = [
     // --- ① 確率「大」グループ (weight: 2) ---
     { name: "大和", weight: 2 },
-    { name: "島田", weight: 2 },
     { name: "加藤田", weight: 2 },
     { name: "横山", weight: 2 },
     { name: "藤谷", weight: 2 },
@@ -14,19 +13,25 @@ const items = [
     { name: "藤本", weight: 2 },
     { name: "中村", weight: 2 },
     { name: "酒井", weight: 2 },
-    { name: "初鹿", weight: 2 },
+    { name: "山本", weight: 2 },
+
 
 
     // --- ② 確率「小」グループ (weight: 1) ---
     { name: "田口", weight: 1 },
     { name: "関", weight: 1 },
+    { name: "横川", weight: 1 },
+
 
     // --- ③ 確率「0」グループ (weight: 0) ---
     // ルーレットの盤面には表示されますが、絶対に止まりません
     { name: "須田", weight: 0 },
     { name: "市川", weight: 0 },
     { name: "原沢", weight: 0 },
-    { name: "横川", weight: 0 },
+    { name: "初鹿", weight: 0 },
+    { name: "宮下", weight: 0 },
+    { name: "福治", weight: 0 },
+
 ];
 // ★★★★★★★★★★★★★★★★★★★★★
 
