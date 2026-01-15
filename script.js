@@ -14,12 +14,12 @@ const items = [
     { name: "中村", weight: 2 },
     { name: "酒井", weight: 2 },
     { name: "山本", weight: 2 },
-
+    { name: "リナ", weight: 2 },
 
 
     // --- ② 確率「小」グループ (weight: 1) ---
-    { name: "田口", weight: 1 },
-    { name: "関", weight: 1 },
+    { name: "田口", weight: 2 },
+    { name: "関", weight: 2 },
     { name: "横川", weight: 1 },
 
 
